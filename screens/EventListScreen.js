@@ -17,7 +17,7 @@ export default function EventListScreen({ navigation }) {
     return (
         <View style={styles.container}>
             <HeaderButtons>
-                <Item title="Create My Event" iconName="plus" onPress={handleCreateEventPress} style={{ backgroundColor: '444', borderRadius: 10, fontSize: 20 }} />
+                <Item title="Create My Event" iconName="plus" onPress={handleCreateEventPress} style={styles.button} />
             </HeaderButtons>
             <FlatList
                 data={EVENTS}

@@ -7,15 +7,14 @@ import styles from '../styles/EventListItemStyles';
 export default function EventListItem({ event, onPress }) {
   const { name, photo, date, time, location, participants, availableSlots } = event;
 
+  console.log(photo);
   return (
     <TouchableOpacity style={styles.itemContainer} onPress={onPress}>
       <View style={styles.imageContainer}>
-        <Image source={{ uri: photo }} style={styles.image} />
+        <Image source={ photo } style={styles.image} />
       </View>
       <View style={styles.infoContainer}>
         <Text style={styles.name}>{name}</Text>
-        <Text style={styles.date}>{date}</Text>
-        <Text style={styles.time}>{time}</Text>
         <Text style={styles.location}>{location}</Text>
         <Text style={styles.participants}>
           {participants.length} Participantes
@@ -24,10 +23,13 @@ export default function EventListItem({ event, onPress }) {
           {availableSlots} Vagas
         </Text>
       </View>
-      <TouchableOpacity style={styles.button} onPress={() => {}}>
-        <Text style={styles.buttonText}>Participar</Text>
-      </TouchableOpacity>
-    </TouchableOpacity>
+      <View style={styles.dateTimeContainer}>
+        <Text style={styles.label}>Date:</Text>
+        <Text style={styles.info}>{date}</Text>
+        <Text style={styles.label}>Time:</Text>
+        <Text style={styles.info}>{time}</Text>
+      </View>
+    </TouchableOpacity >
   );
 }
 

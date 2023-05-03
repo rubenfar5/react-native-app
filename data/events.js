@@ -2,7 +2,7 @@ export const EVENTS = [
     {
       id: '1',
       name: 'Jorge Ferreira',
-      photo: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      photo: require('../fotos/jorge.jpg'),
       date: '29/04/2023',
       time: '21h00',
       location: 'Braga',
@@ -13,7 +13,7 @@ export const EVENTS = [
     {
       id: '2',
       name: 'Alexandra',
-      photo: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      photo: require('../fotos/alexandra.jpeg'),
       date: '30/04/2023',
       time: '11h30',
       location: 'Guimarães',

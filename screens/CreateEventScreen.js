@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import styles from '../styles/CreateEventStyles';
 
 const CreateEventScreen = ({ navigation }) => {
-    const [name, setName] = useState('');
-    const [photo, setPhoto] = useState('');
+    //const [name, setName] = useState('');
+    //const [photo, setPhoto] = useState('');
     const [date, setDate] = useState('');
     const [time, setTime] = useState('');
     const [location, setLocation] = useState('');
@@ -19,6 +20,7 @@ const CreateEventScreen = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
+            {/*
             <Text style={styles.label}>Name:</Text>
             <TextInput
                 style={styles.input}
@@ -26,15 +28,14 @@ const CreateEventScreen = ({ navigation }) => {
                 onChangeText={setName}
                 placeholder="Enter name"
             />
-
             <Text style={styles.label}>Photo:</Text>
             <TextInput
                 style={styles.input}
                 value={photo}
                 onChangeText={setPhoto}
                 placeholder="Enter photo URL"
-            />
-
+            /> 
+            */}
             <Text style={styles.label}>Date:</Text>
             <TextInput
                 style={styles.input}
@@ -75,27 +76,14 @@ const CreateEventScreen = ({ navigation }) => {
                 placeholder="Enter available slots"
             />
 
-            <Button title="Create Event" onPress={handleCreateEvent} />
+            <Button 
+                title="Create Event" 
+                onPress={handleCreateEvent} 
+                buttonStyle={ styles.button } //nao sei pq nao aplica este estilo
+            />
         </View>
     );
 };
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        padding: 20,
-    },
-    label: {
-        fontSize: 18,
-        marginBottom: 10,
-    },
-    input: {
-        fontSize: 18,
-        borderWidth: 1,
-        borderColor: '#ccc',
-        marginBottom: 20,
-        padding: 10,
-    },
-});
 
 export default CreateEventScreen;
