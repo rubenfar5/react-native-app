@@ -7,7 +7,6 @@ import styles from '../styles/EventListItemStyles';
 export default function EventListItem({ event, onPress }) {
   const { name, photo, date, time, location, participants, availableSlots } = event;
 
-  console.log(photo);
   return (
     <TouchableOpacity style={styles.itemContainer} onPress={onPress}>
       <View style={styles.imageContainer}>
