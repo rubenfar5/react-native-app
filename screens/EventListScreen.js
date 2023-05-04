@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, FlatList, Image } from 'react-native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
+
 import EventListItem from '../components/EventListItem';
 import { EVENTS } from '../data/events';
 import styles from '../styles/EventListItemStyles';
