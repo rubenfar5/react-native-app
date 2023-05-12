@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 const image = require('./assets/background.jpg');
 
-export default function spaces({ navigation }) {
+export default function Spaces({ navigation }) {
   const [selectedItem, setSelectedItem] = useState(null);
   const [selectedItemHours, setSelectedItemHours] = useState(null);
   const [showModal, setShowModal] = useState(false);

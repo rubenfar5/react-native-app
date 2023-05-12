@@ -11,8 +11,12 @@ export default function EventListScreen({ navigation }) {
         navigation.navigate('CreateEvent');
     };
 
+    const handleEventDetails = (event) => {
+        navigation.navigate('EventDetails', { event });
+    };
+
     const renderEventListItem = ({ item }) => (
-        <EventListItem event={item} onPress={() => (item)} />
+        <EventListItem event={item} onPress={() => handleEventDetails(item)} />
     );
 
     return (

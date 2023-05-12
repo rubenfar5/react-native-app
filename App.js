@@ -6,8 +6,9 @@ import { Image, View, Text } from 'react-native';
 
 import EventListScreen from './screens/EventListScreen';
 import CreateEventScreen from './screens/CreateEventScreen';
+import EventDetailsScreen from './screens/EventDetailsScreen';
 import UserProfile from './UserProfile.js';
-import Spaces from './spaces.js';
+import Spaces from './Spaces.js';
 import Rodovia from './Rodovia.js';
 import TennisReal from './TennisReal.js';
 import CampoPadel from './CampoPadel.js';
@@ -42,6 +43,7 @@ export default function App() {
             headerTitleAlign: 'center',
             headerTitle: () => <LogoTitle />,
           }} />
+        <Stack.Screen name="EventDetails" component={EventDetailsScreen} options={{ title: 'Detalhes do Evento', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
         <Stack.Screen name="CreateEvent" component={CreateEventScreen} options={{ title: 'Criar Evento', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
         <Stack.Screen name="UserProfile" component={UserProfile} options={{ title: 'UserProfile', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
         <Stack.Screen name="Spaces" component={Spaces} options={{ title: 'Spaces', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />

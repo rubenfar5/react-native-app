@@ -15,17 +15,14 @@ export default function EventListItem({ event, onPress }) {
       <View style={styles.infoContainer}>
         <Text style={styles.name}>{name}</Text>
         <Text style={styles.location}>{location}</Text>
-        <Text style={styles.participants}>
-          {participants.length} Participantes
-        </Text>
         <Text style={styles.availableSlots}>
           {availableSlots} Vagas
         </Text>
       </View>
-      <View style={styles.dateTimeContainer}>
-        <Text style={styles.label}>Date:</Text>
+      <View style={styles.infoContainer}>
+        <Text style={styles.label}>Data:</Text>
         <Text style={styles.info}>{date}</Text>
-        <Text style={styles.label}>Time:</Text>
+        <Text style={styles.label}>Horas:</Text>
         <Text style={styles.info}>{time}</Text>
       </View>
     </TouchableOpacity >
