@@ -4,11 +4,16 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 //import { HeaderBackground } from '@react-navigation/elements';
 //import { Image, View, Text } from 'react-native';
 
+import Login from './Login';
+import Registo from './Registo';
+import RecuperarSenha from './RecuperarSenha';
+import Modalidades from './Modalidades';
+import Chat from './Chat';
 import EventListScreen from './screens/EventListScreen';
 import CreateEventScreen from './screens/CreateEventScreen';
 import EventDetailsScreen from './screens/EventDetailsScreen';
 import UserProfile from './UserProfile.js';
-import Spaces from './Spaces.js';
+import Spaces from './spaces.js';
 import Rodovia from './Rodovia.js';
 import TennisReal from './TennisReal.js';
 import CampoPadel from './CampoPadel.js';
@@ -32,6 +37,11 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen name="Login" component={Login} options={{ title: 'Login', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
+        <Stack.Screen name="Registo" component={Registo} options={{ title: 'Registo', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
+        <Stack.Screen name="RecuperarSenha" component={RecuperarSenha} options={{ title: 'Recuperar Senha', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
+        <Stack.Screen name="Modalidades" component={Modalidades} options={{ title: 'Lista de Modalidades', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
+        <Stack.Screen name="Chat" component={Chat} options={{ title: 'Chat', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
         <Stack.Screen name="EventList" component={EventListScreen} options={{ title: 'Padel', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
         <Stack.Screen name="EventDetails" component={EventDetailsScreen} options={{ title: 'Detalhes do Evento', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
         <Stack.Screen name="CreateEvent" component={CreateEventScreen} options={{ title: 'Criar Evento', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
