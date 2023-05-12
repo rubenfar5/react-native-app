@@ -3,7 +3,6 @@ import { StyleSheet } from 'react-native';
 const EventDetailsStyles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
         paddingHorizontal: 15,
         paddingTop: 10,
     },
@@ -12,7 +11,6 @@ const EventDetailsStyles = StyleSheet.create({
         height: 200,
         alignItems: 'center',
         justifyContent: 'center',
-        marginBottom: 15,
     },
     image: {
         width: '100%',
@@ -51,4 +49,22 @@ const EventDetailsStyles = StyleSheet.create({
         fontSize: 16,
         marginBottom: 5,
     },
+    background: {
+        flex: 1,
+    },
+    button: {
+        backgroundColor: '#3498db',
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        borderRadius: 5,
+        alignSelf: 'center',
+        marginTop: 10,
+    },
+    buttonText: {
+        color: '#fff',
+        fontSize: 16,
+        fontWeight: 'bold',
+    },
 });
+
+export default EventDetailsStyles;

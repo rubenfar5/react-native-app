@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, ImageBackground } from 'react-native';
 import styles from '../styles/CreateEventStyles';
 
 const CreateEventScreen = ({ navigation }) => {
+
+    const image = require('../assets/background.jpg');
+
     //const [name, setName] = useState('');
     //const [photo, setPhoto] = useState('');
     const [date, setDate] = useState('');
@@ -19,8 +22,10 @@ const CreateEventScreen = ({ navigation }) => {
     };
 
     return (
-        <View style={styles.container}>
-            {/*
+        <ImageBackground source={image} style={styles.background}>
+
+            <View style={styles.container}>
+                {/*
             <Text style={styles.label}>Name:</Text>
             <TextInput
                 style={styles.input}
@@ -36,52 +41,54 @@ const CreateEventScreen = ({ navigation }) => {
                 placeholder="Enter photo URL"
             /> 
             */}
-            <Text style={styles.label}>Date:</Text>
-            <TextInput
-                style={styles.input}
-                value={date}
-                onChangeText={setDate}
-                placeholder="Enter date"
-            />
+                <Text style={styles.label}>Date:</Text>
+                <TextInput
+                    style={styles.input}
+                    value={date}
+                    onChangeText={setDate}
+                    placeholder="Enter date"
+                />
 
-            <Text style={styles.label}>Time:</Text>
-            <TextInput
-                style={styles.input}
-                value={time}
-                onChangeText={setTime}
-                placeholder="Enter time"
-            />
+                <Text style={styles.label}>Time:</Text>
+                <TextInput
+                    style={styles.input}
+                    value={time}
+                    onChangeText={setTime}
+                    placeholder="Enter time"
+                />
 
-            <Text style={styles.label}>Location:</Text>
-            <TextInput
-                style={styles.input}
-                value={location}
-                onChangeText={setLocation}
-                placeholder="Enter location"
-            />
+                <Text style={styles.label}>Location:</Text>
+                <TextInput
+                    style={styles.input}
+                    value={location}
+                    onChangeText={setLocation}
+                    placeholder="Enter location"
+                />
 
-            <Text style={styles.label}>Total slots:</Text>
-            <TextInput
-                style={styles.input}
-                value={totalSlots}
-                onChangeText={setTotalSlots}
-                placeholder="Enter total slots"
-            />
+                <Text style={styles.label}>Total slots:</Text>
+                <TextInput
+                    style={styles.input}
+                    value={totalSlots}
+                    onChangeText={setTotalSlots}
+                    placeholder="Enter total slots"
+                />
 
-            <Text style={styles.label}>Available slots:</Text>
-            <TextInput
-                style={styles.input}
-                value={availableSlots}
-                onChangeText={setAvailableSlots}
-                placeholder="Enter available slots"
-            />
+                <Text style={styles.label}>Available slots:</Text>
+                <TextInput
+                    style={styles.input}
+                    value={availableSlots}
+                    onChangeText={setAvailableSlots}
+                    placeholder="Enter available slots"
+                />
 
-            <Button 
-                title="Create Event" 
-                onPress={handleCreateEvent} 
-                buttonStyle={ styles.button } //nao sei pq nao aplica este estilo
-            />
-        </View>
+                <Button
+                    title="Create Event"
+                    onPress={handleCreateEvent}
+                    buttonStyle={styles.button} //nao sei pq nao aplica este estilo
+                />
+            </View>
+        </ImageBackground>
+
     );
 };
 

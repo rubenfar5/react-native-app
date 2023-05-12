@@ -3,7 +3,6 @@ import { StyleSheet } from 'react-native';
 const eventListItemStyles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ec3535',
     paddingHorizontal: 15,
     paddingTop: 10,
   },
@@ -65,6 +64,9 @@ const eventListItemStyles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 20,
     marginBottom: 10,
+  },
+  background: {
+    flex: 1,
   },
 });
 

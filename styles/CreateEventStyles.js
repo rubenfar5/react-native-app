@@ -4,7 +4,6 @@ const CreateEventStyles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 20,
-        backgroundColor: '#ec3535',
     },
     label: {
         fontSize: 18,
@@ -26,6 +25,9 @@ const CreateEventStyles = StyleSheet.create({
         paddingVertical: 10,
         paddingHorizontal: 20,
         marginBottom: 10,
+    },
+    background: {
+        flex: 1,
     },
 });
 
