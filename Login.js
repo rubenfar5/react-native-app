@@ -52,7 +52,7 @@ export default function Login({ navigation }) {
                         marginHorizontal: 50,
                         marginVertical: 10,
                     }}
-                    onPress={() => navigation.navigate('Chat')}
+                    onPress={() => navigation.navigate('MenuPrincipal')}
                 />
             </Card>
 

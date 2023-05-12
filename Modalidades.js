@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import { Input, Button, Card, Tab, TabView} from '@rneui/themed';
+import { StyleSheet, Text, TextInput, TouchableOpacity, TouchableWithoutFeedback, View, ImageBackground, ScrollView, Linking, Image } from 'react-native';
+import { Input, Button, Card, Tab, TabView } from '@rneui/themed';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
-
+import backgroundImage from './fotos/75957505-b778-4f83-83e0-771e21fbd1a6.jpeg';
+import corridaImage from './fotos/corrida.jpg';
+import dançaImage from './fotos/dança.jpg';
+import padelImage from './fotos/padel.jpg';
+import futebolImage from './fotos/futebol.jpg';
 
 export default function Login({ navigation }) {
     const [username, setUsername] = useState('');
@@ -15,76 +20,52 @@ export default function Login({ navigation }) {
     };
 
     return (
-        <View style={styles.container}>
+        <ImageBackground source={backgroundImage} style={styles.backgroundImage} fixed={true}>
 
-            <Card containerStyle={styles.cardContainer}>
-                <View style={styles.imageContainer}>
-                    <Card.Image
-                        style={{ width: 100, height: 100 }}
-                        source={require('./fotos/unnamed.png')}
-                    />
-                    <Card.Divider />
+            <ScrollView contentContainerStyle={styles.content}>
+            <View style={styles.buttonsContainer}>
+                <TouchableWithoutFeedback onPress={() => Linking.openURL('https://www.youtube.com/watch?v=_kGESn8ArrU')}>
+                    <View style={styles.button}>
+                        <Image source={corridaImage} style={styles.buttonImage} />
+                        <View style={styles.buttonTextContainer}>
+                            <Text style={styles.buttonText}>Corrida</Text>
+                        </View>
+                    </View>
+                </TouchableWithoutFeedback>
 
+                <TouchableWithoutFeedback onPress={() => Linking.openURL('https://www.youtube.com/watch?v=NX-68fxhL_4')}>
+                    <View style={styles.button}>
+                        <Image source={padelImage} style={styles.buttonImage} />
+                        <View style={styles.buttonTextContainer}>
+                            <Text style={styles.buttonText}>Padel</Text>
+                        </View>
+                    </View>
+                </TouchableWithoutFeedback>
                 </View>
-                <Card.Title>Bem-vindo à LetsMatch!</Card.Title>
-                <Input
-                    placeholder='Email'
-                    value={username}
-                    onChangeText={setUsername}
-                />
-                <Input placeholder="Password"
-                    secureTextEntry={true}
-                    errorStyle={{ color: 'red' }}
-                    errorMessage='Password incorreta' />
+                <View style={styles.buttonsContainer}>
+                <TouchableWithoutFeedback onPress={() => Linking.openURL('https://www.youtube.com/watch?v=cpIwMZ3cUEc')}>
+                    <View style={styles.button}>
+                        <Image source={futebolImage} style={styles.buttonImage} />
+                        <View style={styles.buttonTextContainer}>
+                            <Text style={styles.buttonText}>Futebol</Text>
+                        </View>
+                    </View>
+                </TouchableWithoutFeedback>
 
+                <TouchableWithoutFeedback onPress={() => Linking.openURL('https://www.youtube.com/watch?v=zFbFxl9dJGM')}>
+                    <View style={styles.button}>
+                        <Image source={dançaImage} style={styles.buttonImage} />
+                        <View style={styles.buttonTextContainer}>
+                            <Text style={styles.buttonText}>Dança</Text>
+                        </View>
+                    </View>
+                </TouchableWithoutFeedback>
+                </View>
 
-                <Button
-                    title="LOG IN"
-                    iconContainerStyle={{ marginRight: 10 }}
-                    titleStyle={{ fontWeight: '700' }}
-                    buttonStyle={{
-                        backgroundColor: '#ec3535',
-                        borderColor: 'transparent',
-                        borderWidth: 0,
-                        borderRadius: 30,
-                    }}
-                    containerStyle={{
-                        width: 200,
-                        marginHorizontal: 50,
-                        marginVertical: 10,
-                    }}
-                    onPress={() => navigation.navigate('Modalidade')}
-                />
-            </Card>
+                
+            </ScrollView>
+        </ImageBackground>
 
-            <View style={styles.bottomContainer}>
-                <Button
-                    title="Registar conta"
-                    iconContainerStyle={{ marginRight: 10 }}
-                    titleStyle={{ fontWeight: '400', color: '#ec3535' }}
-                    buttonStyle={{
-                        backgroundColor: '#fff',
-                        borderColor: 'transparent',
-                        borderWidth: 0,
-                        borderRadius: 30,
-                    }}
-                    containerStyle={{
-                        width: 200,
-                        marginHorizontal: 50,
-                        marginVertical: 10,
-
-                    }}
-                    onPress={() => navigation.navigate('Registo')}
-                />
-                <TouchableOpacity onPress={() => navigation.navigate('RecuperarSenha')}>
-                    <Text style={styles.forgotPassword} >Esqueceu a palavra-passe?</Text>
-                </TouchableOpacity>
-            </View>
-
-            
-        </View >
-
-        
     );
 }
 
@@ -93,44 +74,60 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#ec3535',
+        paddingHorizontal: 10,
+        paddingTop: 50,
+        paddingBottom: 50,
     },
-    title: {
-        fontSize: 24,
-        marginBottom: 16,
-    },
-    bottomContainer: {
+    content: {
+        flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: 50,
+        paddingHorizontal: 10,
+        paddingTop: 50,
+        paddingBottom: 50,
     },
-    forgotPassword: {
+    backgroundImage: {
+        flex: 1,
+        resizeMode: 'cover',
+        justifyContent: 'center',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+    },
+    text: {
         color: '#fff',
-        textDecorationLine: 'underline',
-        marginBottom: 20,
+        fontWeight: 'bold',
+        fontSize: 17,
     },
-    input: {
-        borderWidth: 1,
-        borderColor: '#ccc',
-        padding: 8,
-        marginVertical: 8,
-        width: '80%',
+    buttonTextContainer: {
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        backgroundColor: 'rgba(0,0,0,0.5)',
+        padding: 5,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     button: {
-        backgroundColor: 'blue',
-        padding: 8,
-        borderRadius: 4,
+        marginHorizontal: 5,
+        marginVertical: 10,
+        width: 150,
+        overflow: 'hidden',
+        borderRadius: 10,
+        width: 170,
+        height: 250,
+    },
+    buttonImage: {
+        width: '100%',
+        height: '100%',
     },
     buttonText: {
         color: '#fff',
-        fontSize: 18,
-    },
-    imageContainer: {
-        justifyContent: "center",
-        alignItems: "center",
-        marginBottom: 10,
-    },
-    cardContainer: {
-        borderRadius: 20,
+        fontSize: 15,
+        fontWeight: 'bold',
     },
 });
+

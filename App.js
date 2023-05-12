@@ -17,6 +17,7 @@ import Spaces from './spaces.js';
 import Rodovia from './Rodovia.js';
 import TennisReal from './TennisReal.js';
 import CampoPadel from './CampoPadel.js';
+import MenuPrincipal from './MenuPrincipal.js';
 
 
 const Stack = createNativeStackNavigator();
@@ -40,6 +41,7 @@ export default function App() {
         <Stack.Screen name="Login" component={Login} options={{ title: 'Login', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
         <Stack.Screen name="Registo" component={Registo} options={{ title: 'Registo', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
         <Stack.Screen name="RecuperarSenha" component={RecuperarSenha} options={{ title: 'Recuperar Senha', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
+        <Stack.Screen name="MenuPrincipal" component={MenuPrincipal} options={{ title: 'Menu Principal', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
         <Stack.Screen name="Modalidades" component={Modalidades} options={{ title: 'Lista de Modalidades', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
         <Stack.Screen name="Chat" component={Chat} options={{ title: 'Chat', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
         <Stack.Screen name="EventList" component={EventListScreen} options={{ title: 'Padel', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
