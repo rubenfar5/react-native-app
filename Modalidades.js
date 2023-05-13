@@ -32,8 +32,7 @@ export default function Login({ navigation }) {
                         </View>
                     </View>
                 </TouchableWithoutFeedback>
-
-                <TouchableWithoutFeedback onPress={() => Linking.openURL('https://www.youtube.com/watch?v=NX-68fxhL_4')}>
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('EventList')}>
                     <View style={styles.button}>
                         <Image source={padelImage} style={styles.buttonImage} />
                         <View style={styles.buttonTextContainer}>

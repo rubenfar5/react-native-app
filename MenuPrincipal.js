@@ -24,37 +24,17 @@ export default function Login({ navigation }) {
                 <Text style={styles.text}>Modalidades</Text>
                 <Icon name="futbol-o" size={20} color="#ec3535" />
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Chat')}>
-                <Text style={styles.text}>Chat</Text>
-                <Icon name="comments" size={20} color="#ec3535" />
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Spaces')}>
+                <Text style={styles.text}>Espaços</Text>
+                <Icon name="list-ol" size={20} color="#ec3535" />
             </TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('UserProfile')}>
                 <Text style={styles.text}>Perfil Pessoal</Text>
                 <Icon name="user" size={20} color="#ec3535" />
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('UserProfile')}>
-                <Text style={styles.text}>????</Text>
-                <Icon name="user" size={20} color="#ec3535" />
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('UserProfile')}>
-                <Text style={styles.text}>?????</Text>
-                <Icon name="user" size={20} color="#ec3535" />
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('UserProfile')}>
-                <Text style={styles.text}>?????</Text>
-                <Icon name="user" size={20} color="#ec3535" />
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('UserProfile')}>
-                <Text style={styles.text}>?????</Text>
-                <Icon name="user" size={20} color="#ec3535" />
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('UserProfile')}>
-                <Text style={styles.text}>?????</Text>
-                <Icon name="user" size={20} color="#ec3535" />
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('UserProfile')}>
-                <Text style={styles.text}>?????</Text>
-                <Icon name="user" size={20} color="#ec3535" />
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Chat')}>
+                <Text style={styles.text}>Chat</Text>
+                <Icon name="comments" size={20} color="#ec3535" />
             </TouchableOpacity>
         </ScrollView>
         </ImageBackground>

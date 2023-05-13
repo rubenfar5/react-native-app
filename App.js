@@ -13,7 +13,7 @@ import EventListScreen from './screens/EventListScreen';
 import CreateEventScreen from './screens/CreateEventScreen';
 import EventDetailsScreen from './screens/EventDetailsScreen';
 import UserProfile from './UserProfile.js';
-import Spaces from './spaces.js';
+import Spaces from './Spaces.js';
 import Rodovia from './Rodovia.js';
 import TennisReal from './TennisReal.js';
 import CampoPadel from './CampoPadel.js';
@@ -47,11 +47,11 @@ export default function App() {
         <Stack.Screen name="EventList" component={EventListScreen} options={{ title: 'Padel', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
         <Stack.Screen name="EventDetails" component={EventDetailsScreen} options={{ title: 'Detalhes do Evento', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
         <Stack.Screen name="CreateEvent" component={CreateEventScreen} options={{ title: 'Criar Evento', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
-        <Stack.Screen name="UserProfile" component={UserProfile} options={{ title: 'UserProfile', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
-        <Stack.Screen name="Spaces" component={Spaces} options={{ title: 'Spaces', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
+        <Stack.Screen name="UserProfile" component={UserProfile} options={{ title: 'Perfil', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
+        <Stack.Screen name="Spaces" component={Spaces} options={{ title: 'Espaços', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
         <Stack.Screen name="Rodovia" component={Rodovia} options={{ title: 'Rodovia', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
-        <Stack.Screen name="TennisReal" component={TennisReal} options={{ title: 'TennisReal', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
-        <Stack.Screen name="CampoPadel" component={CampoPadel} options={{ title: 'CampoPadel', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
+        <Stack.Screen name="TennisReal" component={TennisReal} options={{ title: 'Tennis Real', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
+        <Stack.Screen name="CampoPadel" component={CampoPadel} options={{ title: 'Campo Padel', headerStyle: { backgroundColor: '#ec3535' }, headerTitleStyle: { fontWeight: 'bold', color: '#FFF' }, headerTitleAlign: 'center' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
