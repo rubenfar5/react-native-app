@@ -2,20 +2,11 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Image } from 'react-native';
 import { Linking, TouchableOpacity } from 'react-native';
-import { HeaderButtons, Item } from 'react-navigation-header-buttons';
-
 
 export default function UserProfile({ navigation }) {
 
-  const handleSpaces = () => {
-    navigation.navigate('Spaces');
-  };
-
   return (
     <View style={styles.container}>
-      <HeaderButtons>
-        <Item title="Spaces" iconName="plus" onPress={handleSpaces} style={styles.button} />
-      </HeaderButtons>
       <Image
         style={styles.image}
         source={require('./assets/pedroribeiro.jpg')}
@@ -34,15 +25,15 @@ export default function UserProfile({ navigation }) {
         <Image style={styles.image1} source={require('./assets/run.png')} />
         <Image style={styles.image1} source={require('./assets/tennis.png')} />
       </View>
-      <View style={styles.row}>
-        <Image style={styles.image2} source={require('./assets/reload.png')} />
-        <Image style={styles.image2} source={require('./assets/remove.png')} />
-        <Image style={styles.image2} source={require('./assets/fav.png')} />
-        <Image style={styles.image2} source={require('./assets/email.png')} />
-      </View>
     </View>
   );
 };
+/*<View style={styles.row}>
+<Image style={styles.image2} source={require('./assets/reload.png')} />
+<Image style={styles.image2} source={require('./assets/remove.png')} />
+<Image style={styles.image2} source={require('./assets/fav.png')} />
+<Image style={styles.image2} source={require('./assets/email.png')} />
+</View> */
 
 const styles = StyleSheet.create({
   container: {
@@ -114,10 +105,9 @@ const styles = StyleSheet.create({
   },
   square: {
     width: 370,
-    height: 210,
+    height: 230,
     borderRadius: 15,
     backgroundColor: 'white',
-    marginTop: -30,
     //position: 'absolute',
     bottom: 0,
   },
@@ -125,6 +115,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+    bottom: 12,
   },
   button: {
     backgroundColor: '#fff',
